@@ -1,0 +1,221 @@
+/* Biến màu sắc và cấu trúc chính */
+:root {
+    --honda-red: #cc0000;
+    --text-dark: #222;
+    --text-gray: #666;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --border: #eeeeee;
+    --status-active: #28a745;
+    --status-inactive: #adb5bd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg-light);
+}
+
+.main-content {
+    margin-left: 260px; /* Chừa chỗ cho Sidebar */
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Page Header & Toolbar */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.toolbar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search-box {
+    position: relative;
+    width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-box input:focus {
+    border-color: var(--honda-red);
+    box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.1);
+}
+
+.search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.btn-add {
+    background-color: var(--honda-red);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #a30000;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Khi sản phẩm bị ẩn (trang_thai = 0) */
+.product-card.inactive {
+    opacity: 0.6;
+    filter: grayscale(0.5);
+    border: 1px dashed #ccc;
+}
+
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.product-price {
+    color: var(--honda-red);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.product-stock {
+    font-size: 13px;
+    color: var(--text-gray);
+}
+
+/* Footer Card & Actions */
+.card-footer {
+    padding: 12px 15px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-instock { background: #e6fcf5; color: #0ca678; }
+.status-outstock { background: #fff5f5; color: #ff6b6b; }
+
+.action-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.action-icons i {
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.fa-edit { color: #007bff; }
+.fa-edit:hover { color: #0056b3; }
+
+.fa-eye { color: var(--status-active); }
+.fa-eye-slash { color: var(--status-inactive); }
+
+/* Style cho bộ lọc trạng thái kinh doanh */
+.filter-select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--white);
+    color: var(--text-dark);
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    min-width: 180px;
+}
+
+.filter-select:focus {
+    border-color: var(--honda-red);
+    box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.1);
+}
+
+/* Điều chỉnh Toolbar để các phần tử không bị dính sát nhau trên màn hình nhỏ */
+@media (max-width: 992px) {
+    .toolbar {
+        flex-wrap: wrap;
+    }
+    .search-box {
+        width: 100%;
+    }
+}

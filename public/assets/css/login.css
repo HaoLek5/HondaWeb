@@ -1,0 +1,121 @@
+/* Khởi tạo các biến màu sắc và Reset mặc định */
+:root {
+    --honda-red: #cc0000;
+    --honda-dark: #222;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
+    --border-color: #ddd;
+    --text-gray: #777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card đăng nhập */
+.login-card {
+    background: var(--white);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--honda-red);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    color: var(--honda-dark);
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.login-header p {
+    color: var(--text-gray);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.input-control:focus {
+    border-color: var(--honda-red);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.1);
+}
+
+/* Password Container */
+.password-container {
+    position: relative;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+}
+
+/* Button */
+.btn-login {
+    width: 100%;
+    padding: 13px;
+    background-color: var(--honda-red);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #a30000;
+}
+
+#message {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}

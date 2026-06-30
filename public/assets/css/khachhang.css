@@ -1,0 +1,139 @@
+/* Biến màu sắc đồng bộ với hệ thống Honda Thắng Lợi */
+:root {
+    --honda-red: #cc0000;
+    --text-dark: #222;
+    --text-main: #333;
+    --text-muted: #666;
+    --bg-light: #f8f9fa;
+    --white: #ffffff;
+    --border-color: #eee;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #f4f7f6;
+}
+
+.main-content {
+    margin-left: 260px; /* Khớp sidebar navi */
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Header & Toolbar */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Search Box */
+.search-input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    outline: none;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.search-input:focus {
+    border-color: var(--honda-red);
+    box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.1);
+}
+
+/* Button Thêm */
+.btn-add {
+    background: var(--honda-red);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    background: #a30000;
+    box-shadow: 0 4px 10px rgba(204, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Table Style */
+.table-container {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background: var(--bg-light);
+    padding: 15px;
+    text-align: left;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 700;
+}
+
+tbody td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Icon Sửa */
+.btn-edit {
+    color: #007bff; /* Giữ màu xanh dương cho nút sửa để hài hòa */
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.btn-edit:hover {
+    transform: scale(1.2);
+    color: #0056b3;
+}

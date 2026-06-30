@@ -1,0 +1,92 @@
+:root {
+    --honda-red: #cc0000;
+    --sidebar-bg: #1a1a1a;
+    --sidebar-text: #adb5bd;
+    --sidebar-hover: #333;
+    --white: #ffffff;
+}
+
+/* Sidebar Layout */
+.sidebar {
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    color: var(--white);
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar-header h3 {
+    color: var(--honda-red);
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Menu Items */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.nav-item {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+}
+
+.nav-item i {
+    width: 25px;
+    font-size: 18px;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: var(--sidebar-hover);
+    color: var(--white);
+    border-left-color: var(--honda-red);
+}
+
+/* Submenu */
+.has-submenu .submenu {
+    list-style: none;
+    padding: 0;
+    background: #111;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.has-submenu:hover .submenu {
+    max-height: 200px; /* Độ cao tùy chỉnh cho submenu */
+}
+
+.submenu-item {
+    padding: 10px 20px 10px 50px;
+    display: block;
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.submenu-item:hover {
+    color: var(--white);
+    background: #222;
+}
