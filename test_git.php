@@ -1,1 +1,1 @@
-﻿<?php echo 'Hao Le da master các lenh Git basic!'; ?>
+﻿<?php echo 'Hao Le sua dong nay thanh mau XANH'; ?>
