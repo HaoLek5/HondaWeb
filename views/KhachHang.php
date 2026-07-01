@@ -30,7 +30,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th width="80">Mã KH</th>
+                        <th width="80">Mã Khách Hàng</th>
                         <th>Họ và tên</th>
                         <th>Số điện thoại</th>
                         <th>Địa chỉ thường trú</th>
