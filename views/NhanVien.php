@@ -29,7 +29,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th width="80">Mã NV</th>
+                        <th width="80">Mã Nhân Viên</th>
                         <th>Họ và tên</th>
                         <th>Số điện thoại</th>
                         <th>Địa chỉ</th>
