@@ -1,1 +1,1 @@
-﻿<?php echo 'Code da duoc sua tren GitHub'; ?>
+﻿<?php echo 'Hao Le da master các lenh Git basic!'; ?>
